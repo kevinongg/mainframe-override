@@ -22,6 +22,22 @@ SELECT username, first_name, last_name FROM forum_accounts WHERE last_name = 'St
 SELECT * FROM emptystack_accounts WHERE last_name = 'Steele';
 --    username    |  password   | first_name | last_name
 ----------------+-------------+------------+-----------
--- triple-cart-38 | password456 | Andrew     | Steele
+-- triple-cart-38 | password456 | Andrew     | Steele **THIS IS THE DAD WITH AN ACCOUNT AS WELL**
 -- lance-main-11  | password789 | Lance      | Steele
 
+SELECT * FROM emptystack_messages;
+
+SELECT * FROM emptystack_messages WHERE subject ILIKE '%taxi%' OR body ILIKE '%taxi%';
+--  id   |     from     |       to       |   subject    |                            body
+-------+--------------+----------------+--------------+------------------------------------------------------------
+-- LidWj | your-boss-99 | triple-cart-38 | Project TAXI | Deploy Project TAXI by end of week. We need this out ASAP.
+
+SELECT * FROM emptystack_accounts WHERE username = 'your-boss-99';
+--   username   |    password    | first_name | last_name
+--------------+----------------+------------+-----------
+-- your-boss-99 | notagaincarter | Skylar     | Singer
+
+SELECT * FROM emptystack_projects WHERE code = 'TAXI';
+--    id    | code
+----------+------
+-- DczE0v2b | TAXI
